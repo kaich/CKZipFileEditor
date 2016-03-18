@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'CKZipFileEditor_Example', :exclusive => true do
+  pod 'CKZipFileEditor', :path => '../'
+end
+
+target 'CKZipFileEditor_Tests', :exclusive => true do
+  pod 'CKZipFileEditor', :path => '../'
+
+  
+end
