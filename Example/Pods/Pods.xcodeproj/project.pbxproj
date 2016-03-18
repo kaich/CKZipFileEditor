@@ -1,0 +1,822 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		043158C11C9C033C009DFCAC /* libzip_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043158C01C9C033C009DFCAC /* libzip_iOS.framework */; };
+		043158C31C9C03B3009DFCAC /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 043158C21C9C03B3009DFCAC /* libz.1.1.3.tbd */; };
+		16304DAE87C27FC13BC78196B7EFA2C3 /* CKZipFileEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = B771B57F05ECD796582E329FF2AF0878 /* CKZipFileEditor.m */; };
+		1A84F5097D6CE9BEDBAD43900E047749 /* CKZipFileEditor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C95DE4B82135C40ABEEAB6ED890E5618 /* CKZipFileEditor.bundle */; };
+		2138F5E6FBD993008A3C116EA5CB8CB7 /* CKZipFileEditor+IPA.m in Sources */ = {isa = PBXBuildFile; fileRef = AE86BF1E4FA93FB32566234A9418D79A /* CKZipFileEditor+IPA.m */; };
+		4437F617403147F2FD21BE7633FA514D /* Pods-CKZipFileEditor_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 264BBD8BD7C1AEA5B6C5C1160DF6AF1A /* Pods-CKZipFileEditor_Tests-dummy.m */; };
+		533A0ABD572B2E71DBFE06B974FE876C /* CKZipFileEditor+IPA.h in Headers */ = {isa = PBXBuildFile; fileRef = B145AB77FAB21A89D76FFAAA8B5EAC6B /* CKZipFileEditor+IPA.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53A974531886D6025BFC103040D320B3 /* CKDistinction.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFB8C93859C1394DB30B0F7E4B6FE6E /* CKDistinction.m */; };
+		59B069B9B630C933BB35549C6C1EC929 /* CKZipFileEditor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7334AA61AFDF2E3218CD6E9FD401FB6A /* CKZipFileEditor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8AF39031026C86CFAE8BBC3CBFC80A8E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		A059961D496BF5611013E1E246608082 /* CKDistinction.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C0959E7707C23BB31E1F5E7098C1239 /* CKDistinction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A49EE6449D5802C70CEF86E5B63B5832 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		B026FCB5C2DCBC7690A1F123A4B12B02 /* CKZipFileEditor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC839A87DFBA6C3E6D5C774F23D72A02 /* CKZipFileEditor-dummy.m */; };
+		BD65115B1B9FDF25BF0E06EA5A1DD95E /* Pods-CKZipFileEditor_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 95B9770039564DE82FD3411B1FC3FE55 /* Pods-CKZipFileEditor_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFD62FE43CE9675079ED4D45ECAFE2A1 /* Pods-CKZipFileEditor_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CA632164526EADE7A8EE9988945B12 /* Pods-CKZipFileEditor_Example-dummy.m */; };
+		E8BD1865F60FAB077A2698CE175FDDC1 /* Pods-CKZipFileEditor_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31F19F7F87E81B3D289DD0D30E83F150 /* Pods-CKZipFileEditor_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F76B3FC2BCD4D6D41E517BD17C75D076 /* CKZipFileEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 025B865C3B7309A004F1415BE34AE6C0 /* CKZipFileEditor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6F99C143D60BF2B94D6CC4FC6D540C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0352C6874EDA5E13474989020C93EBC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 516EDDA4A0F3580583779F2299FF5648;
+			remoteInfo = "CKZipFileEditor-CKZipFileEditor";
+		};
+		55B30731132A30CE8A9DD35CD3BC8A4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCE123F7E9B507FB42805EE488705A9B;
+			remoteInfo = CKZipFileEditor;
+		};
+		BD937EBBBD62B9CF3E06CDB1B25E2143 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCE123F7E9B507FB42805EE488705A9B;
+			remoteInfo = CKZipFileEditor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00A9C5F83B67D79CB63672F211D24A48 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		025B865C3B7309A004F1415BE34AE6C0 /* CKZipFileEditor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CKZipFileEditor.h; sourceTree = "<group>"; };
+		03CA632164526EADE7A8EE9988945B12 /* Pods-CKZipFileEditor_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CKZipFileEditor_Example-dummy.m"; sourceTree = "<group>"; };
+		043158C01C9C033C009DFCAC /* libzip_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libzip_iOS.framework; sourceTree = "<group>"; };
+		043158C21C9C03B3009DFCAC /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/usr/lib/libz.1.1.3.tbd; sourceTree = DEVELOPER_DIR; };
+		113B31192234B8DC0B1D0C75A2F540EE /* Pods-CKZipFileEditor_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CKZipFileEditor_Example-resources.sh"; sourceTree = "<group>"; };
+		1BB0C5C43AAD3E2CB4BC6D289C02D04D /* CKZipFileEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CKZipFileEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		249C8FC42B5E3CBFB5F01582B946C157 /* Pods-CKZipFileEditor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CKZipFileEditor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		264BBD8BD7C1AEA5B6C5C1160DF6AF1A /* Pods-CKZipFileEditor_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CKZipFileEditor_Tests-dummy.m"; sourceTree = "<group>"; };
+		30565D735EFD1546AC0CE5EF3C1571D8 /* Pods-CKZipFileEditor_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CKZipFileEditor_Tests.modulemap"; sourceTree = "<group>"; };
+		3066B6A8790471C7DFF4B06AFD6AAF9C /* Pods-CKZipFileEditor_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CKZipFileEditor_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		31F19F7F87E81B3D289DD0D30E83F150 /* Pods-CKZipFileEditor_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CKZipFileEditor_Example-umbrella.h"; sourceTree = "<group>"; };
+		320EBB73DB8D79F492A239DE2E8B2A94 /* Pods_CKZipFileEditor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKZipFileEditor_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		46A3BF641460E16D283B52A64268FCC8 /* CKZipFileEditor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CKZipFileEditor.modulemap; sourceTree = "<group>"; };
+		4AFB8C93859C1394DB30B0F7E4B6FE6E /* CKDistinction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CKDistinction.m; sourceTree = "<group>"; };
+		588038411A2A969088C4E243349BEDF6 /* Pods-CKZipFileEditor_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CKZipFileEditor_Example.modulemap"; sourceTree = "<group>"; };
+		67E2D25D9105C6EA94F2F002DA1C4A99 /* Pods-CKZipFileEditor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CKZipFileEditor_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6AE7CAE3EC46A286F00830C10DE5ADE0 /* CKZipFileEditor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CKZipFileEditor-prefix.pch"; sourceTree = "<group>"; };
+		6C0959E7707C23BB31E1F5E7098C1239 /* CKDistinction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CKDistinction.h; sourceTree = "<group>"; };
+		7334AA61AFDF2E3218CD6E9FD401FB6A /* CKZipFileEditor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CKZipFileEditor-umbrella.h"; sourceTree = "<group>"; };
+		7A2C31C36365FB3CD30B2B7EA0D53278 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		838ED4271E541860FD24D1A80685997C /* Pods-CKZipFileEditor_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CKZipFileEditor_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		847034C89B55C7385EC7B1C76E787896 /* Pods-CKZipFileEditor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CKZipFileEditor_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		91062DA5599F53C1C4247885B7136C6B /* Pods-CKZipFileEditor_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CKZipFileEditor_Example-frameworks.sh"; sourceTree = "<group>"; };
+		95B9770039564DE82FD3411B1FC3FE55 /* Pods-CKZipFileEditor_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CKZipFileEditor_Tests-umbrella.h"; sourceTree = "<group>"; };
+		9E79F52E310E645D9AB4A3F1765594AF /* Pods-CKZipFileEditor_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CKZipFileEditor_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		AE86BF1E4FA93FB32566234A9418D79A /* CKZipFileEditor+IPA.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CKZipFileEditor+IPA.m"; sourceTree = "<group>"; };
+		B145AB77FAB21A89D76FFAAA8B5EAC6B /* CKZipFileEditor+IPA.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CKZipFileEditor+IPA.h"; sourceTree = "<group>"; };
+		B771B57F05ECD796582E329FF2AF0878 /* CKZipFileEditor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CKZipFileEditor.m; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BDFC1AECF978CDF97CE3F2895FF9008A /* CKZipFileEditor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CKZipFileEditor.xcconfig; sourceTree = "<group>"; };
+		C95DE4B82135C40ABEEAB6ED890E5618 /* CKZipFileEditor.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CKZipFileEditor.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D733AEE8084E73943F022AEE9F492E8A /* Pods-CKZipFileEditor_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CKZipFileEditor_Tests-resources.sh"; sourceTree = "<group>"; };
+		D9CDAAAE1B7B68599C28EDC65CBED12C /* Pods-CKZipFileEditor_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CKZipFileEditor_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E11231665D77A43E480B5A3F5AB0B1CF /* Pods_CKZipFileEditor_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKZipFileEditor_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E242CC2F6889673A56C3CB2FE92C7A39 /* Pods-CKZipFileEditor_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CKZipFileEditor_Example.release.xcconfig"; sourceTree = "<group>"; };
+		F7CEE64C0677A6525ECE89EBB28054EC /* Pods-CKZipFileEditor_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CKZipFileEditor_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		FBEC6A4F8AC16FC680F7F50B002DDC28 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC839A87DFBA6C3E6D5C774F23D72A02 /* CKZipFileEditor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CKZipFileEditor-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A3CF78C9F52C425867D8D29D4C79BD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043158C31C9C03B3009DFCAC /* libz.1.1.3.tbd in Frameworks */,
+				043158C11C9C033C009DFCAC /* libzip_iOS.framework in Frameworks */,
+				8AF39031026C86CFAE8BBC3CBFC80A8E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F5995FFB0E4C779D95B8CA10A86F4C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE6F99C143D60BF2B94D6CC4FC6D540C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFB93DB667D29FBF068324F8C4D41DD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD901D7FE8ACEAC040C37376FEA4BF83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A49EE6449D5802C70CEF86E5B63B5832 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B8E0B2760A27C21C683B56A8212C102 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C95DE4B82135C40ABEEAB6ED890E5618 /* CKZipFileEditor.bundle */,
+				1BB0C5C43AAD3E2CB4BC6D289C02D04D /* CKZipFileEditor.framework */,
+				E11231665D77A43E480B5A3F5AB0B1CF /* Pods_CKZipFileEditor_Example.framework */,
+				320EBB73DB8D79F492A239DE2E8B2A94 /* Pods_CKZipFileEditor_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F27F3EC0DFA4F0BAFFFFD920244C052 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				FBE4D659EDA9CF2075091552F5B6816C /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		7A5E7BC3CB172B0BCA3FCA5CDE104C4A /* Pods-CKZipFileEditor_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				00A9C5F83B67D79CB63672F211D24A48 /* Info.plist */,
+				30565D735EFD1546AC0CE5EF3C1571D8 /* Pods-CKZipFileEditor_Tests.modulemap */,
+				838ED4271E541860FD24D1A80685997C /* Pods-CKZipFileEditor_Tests-acknowledgements.markdown */,
+				3066B6A8790471C7DFF4B06AFD6AAF9C /* Pods-CKZipFileEditor_Tests-acknowledgements.plist */,
+				264BBD8BD7C1AEA5B6C5C1160DF6AF1A /* Pods-CKZipFileEditor_Tests-dummy.m */,
+				9E79F52E310E645D9AB4A3F1765594AF /* Pods-CKZipFileEditor_Tests-frameworks.sh */,
+				D733AEE8084E73943F022AEE9F492E8A /* Pods-CKZipFileEditor_Tests-resources.sh */,
+				95B9770039564DE82FD3411B1FC3FE55 /* Pods-CKZipFileEditor_Tests-umbrella.h */,
+				249C8FC42B5E3CBFB5F01582B946C157 /* Pods-CKZipFileEditor_Tests.debug.xcconfig */,
+				67E2D25D9105C6EA94F2F002DA1C4A99 /* Pods-CKZipFileEditor_Tests.release.xcconfig */,
+			);
+			name = "Pods-CKZipFileEditor_Tests";
+			path = "Target Support Files/Pods-CKZipFileEditor_Tests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				043158C01C9C033C009DFCAC /* libzip_iOS.framework */,
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				E7E78F3DBED048F999712ABDDE187805 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				1B8E0B2760A27C21C683B56A8212C102 /* Products */,
+				FCAFF242B65D33143AA834FA0012247D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B1A333F12F39C70B328E14AFACD44CCD /* CKZipFileEditor */ = {
+			isa = PBXGroup;
+			children = (
+				3F27F3EC0DFA4F0BAFFFFD920244C052 /* Pod */,
+				F69975AB15AA987F3CCB2D04E86E3A72 /* Support Files */,
+			);
+			name = CKZipFileEditor;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				043158C21C9C03B3009DFCAC /* libz.1.1.3.tbd */,
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C27629D41264043B3EAAB39055E350E6 /* Pods-CKZipFileEditor_Example */ = {
+			isa = PBXGroup;
+			children = (
+				FBEC6A4F8AC16FC680F7F50B002DDC28 /* Info.plist */,
+				588038411A2A969088C4E243349BEDF6 /* Pods-CKZipFileEditor_Example.modulemap */,
+				D9CDAAAE1B7B68599C28EDC65CBED12C /* Pods-CKZipFileEditor_Example-acknowledgements.markdown */,
+				F7CEE64C0677A6525ECE89EBB28054EC /* Pods-CKZipFileEditor_Example-acknowledgements.plist */,
+				03CA632164526EADE7A8EE9988945B12 /* Pods-CKZipFileEditor_Example-dummy.m */,
+				91062DA5599F53C1C4247885B7136C6B /* Pods-CKZipFileEditor_Example-frameworks.sh */,
+				113B31192234B8DC0B1D0C75A2F540EE /* Pods-CKZipFileEditor_Example-resources.sh */,
+				31F19F7F87E81B3D289DD0D30E83F150 /* Pods-CKZipFileEditor_Example-umbrella.h */,
+				847034C89B55C7385EC7B1C76E787896 /* Pods-CKZipFileEditor_Example.debug.xcconfig */,
+				E242CC2F6889673A56C3CB2FE92C7A39 /* Pods-CKZipFileEditor_Example.release.xcconfig */,
+			);
+			name = "Pods-CKZipFileEditor_Example";
+			path = "Target Support Files/Pods-CKZipFileEditor_Example";
+			sourceTree = "<group>";
+		};
+		E7E78F3DBED048F999712ABDDE187805 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1A333F12F39C70B328E14AFACD44CCD /* CKZipFileEditor */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F69975AB15AA987F3CCB2D04E86E3A72 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				46A3BF641460E16D283B52A64268FCC8 /* CKZipFileEditor.modulemap */,
+				BDFC1AECF978CDF97CE3F2895FF9008A /* CKZipFileEditor.xcconfig */,
+				FC839A87DFBA6C3E6D5C774F23D72A02 /* CKZipFileEditor-dummy.m */,
+				6AE7CAE3EC46A286F00830C10DE5ADE0 /* CKZipFileEditor-prefix.pch */,
+				7334AA61AFDF2E3218CD6E9FD401FB6A /* CKZipFileEditor-umbrella.h */,
+				7A2C31C36365FB3CD30B2B7EA0D53278 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CKZipFileEditor";
+			sourceTree = "<group>";
+		};
+		FBE4D659EDA9CF2075091552F5B6816C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6C0959E7707C23BB31E1F5E7098C1239 /* CKDistinction.h */,
+				4AFB8C93859C1394DB30B0F7E4B6FE6E /* CKDistinction.m */,
+				025B865C3B7309A004F1415BE34AE6C0 /* CKZipFileEditor.h */,
+				B771B57F05ECD796582E329FF2AF0878 /* CKZipFileEditor.m */,
+				B145AB77FAB21A89D76FFAAA8B5EAC6B /* CKZipFileEditor+IPA.h */,
+				AE86BF1E4FA93FB32566234A9418D79A /* CKZipFileEditor+IPA.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		FCAFF242B65D33143AA834FA0012247D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C27629D41264043B3EAAB39055E350E6 /* Pods-CKZipFileEditor_Example */,
+				7A5E7BC3CB172B0BCA3FCA5CDE104C4A /* Pods-CKZipFileEditor_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		340F96DFFB8D2B50820CA55BC5DFF25F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8BD1865F60FAB077A2698CE175FDDC1 /* Pods-CKZipFileEditor_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E5A31CACD54F30353030AAC73E6E48E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A059961D496BF5611013E1E246608082 /* CKDistinction.h in Headers */,
+				533A0ABD572B2E71DBFE06B974FE876C /* CKZipFileEditor+IPA.h in Headers */,
+				59B069B9B630C933BB35549C6C1EC929 /* CKZipFileEditor-umbrella.h in Headers */,
+				F76B3FC2BCD4D6D41E517BD17C75D076 /* CKZipFileEditor.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6461528DAD692DF7B67018572A9220BC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD65115B1B9FDF25BF0E06EA5A1DD95E /* Pods-CKZipFileEditor_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		516EDDA4A0F3580583779F2299FF5648 /* CKZipFileEditor-CKZipFileEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A96CC38259740645C054D4FB0100AE80 /* Build configuration list for PBXNativeTarget "CKZipFileEditor-CKZipFileEditor" */;
+			buildPhases = (
+				BFCD6E53145C3CC3422373A376B47155 /* Sources */,
+				BFB93DB667D29FBF068324F8C4D41DD9 /* Frameworks */,
+				A2F75F9490BAAD48344B765A44873F78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CKZipFileEditor-CKZipFileEditor";
+			productName = "CKZipFileEditor-CKZipFileEditor";
+			productReference = C95DE4B82135C40ABEEAB6ED890E5618 /* CKZipFileEditor.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		7CE387275FCBA924CB8CC8C2E0464A16 /* Pods-CKZipFileEditor_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B9E195F1936BD44DBBA408009E67141 /* Build configuration list for PBXNativeTarget "Pods-CKZipFileEditor_Tests" */;
+			buildPhases = (
+				A416CAFD7DA78DFEB6BA42E3A7BD7587 /* Sources */,
+				0F5995FFB0E4C779D95B8CA10A86F4C1 /* Frameworks */,
+				6461528DAD692DF7B67018572A9220BC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56D28C2F2B355A78AC766BCF70238300 /* PBXTargetDependency */,
+			);
+			name = "Pods-CKZipFileEditor_Tests";
+			productName = "Pods-CKZipFileEditor_Tests";
+			productReference = 320EBB73DB8D79F492A239DE2E8B2A94 /* Pods_CKZipFileEditor_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A12FC8B708222A60507B3B482245FC99 /* Pods-CKZipFileEditor_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72B90D1E75D6236AF0E117B81847AF4B /* Build configuration list for PBXNativeTarget "Pods-CKZipFileEditor_Example" */;
+			buildPhases = (
+				9D732C40E4147D2A4D57BBC81A31C280 /* Sources */,
+				CD901D7FE8ACEAC040C37376FEA4BF83 /* Frameworks */,
+				340F96DFFB8D2B50820CA55BC5DFF25F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E7E2A2AB205FEC668B894EAA4E68F61 /* PBXTargetDependency */,
+			);
+			name = "Pods-CKZipFileEditor_Example";
+			productName = "Pods-CKZipFileEditor_Example";
+			productReference = E11231665D77A43E480B5A3F5AB0B1CF /* Pods_CKZipFileEditor_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CCE123F7E9B507FB42805EE488705A9B /* CKZipFileEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B7C39EEE0CAE0893E8C1D5E92B9C445 /* Build configuration list for PBXNativeTarget "CKZipFileEditor" */;
+			buildPhases = (
+				4778877689A138502C590A4D090ED66F /* Sources */,
+				0A3CF78C9F52C425867D8D29D4C79BD2 /* Frameworks */,
+				C19B20E09946042CA90BBED4C27360D8 /* Resources */,
+				3E5A31CACD54F30353030AAC73E6E48E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4206037417B4C9002939242AC4D7590 /* PBXTargetDependency */,
+			);
+			name = CKZipFileEditor;
+			productName = CKZipFileEditor;
+			productReference = 1BB0C5C43AAD3E2CB4BC6D289C02D04D /* CKZipFileEditor.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					CCE123F7E9B507FB42805EE488705A9B = {
+						DevelopmentTeam = LD2L85QJW4;
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 1B8E0B2760A27C21C683B56A8212C102 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCE123F7E9B507FB42805EE488705A9B /* CKZipFileEditor */,
+				516EDDA4A0F3580583779F2299FF5648 /* CKZipFileEditor-CKZipFileEditor */,
+				A12FC8B708222A60507B3B482245FC99 /* Pods-CKZipFileEditor_Example */,
+				7CE387275FCBA924CB8CC8C2E0464A16 /* Pods-CKZipFileEditor_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2F75F9490BAAD48344B765A44873F78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C19B20E09946042CA90BBED4C27360D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A84F5097D6CE9BEDBAD43900E047749 /* CKZipFileEditor.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4778877689A138502C590A4D090ED66F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A974531886D6025BFC103040D320B3 /* CKDistinction.m in Sources */,
+				2138F5E6FBD993008A3C116EA5CB8CB7 /* CKZipFileEditor+IPA.m in Sources */,
+				B026FCB5C2DCBC7690A1F123A4B12B02 /* CKZipFileEditor-dummy.m in Sources */,
+				16304DAE87C27FC13BC78196B7EFA2C3 /* CKZipFileEditor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D732C40E4147D2A4D57BBC81A31C280 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFD62FE43CE9675079ED4D45ECAFE2A1 /* Pods-CKZipFileEditor_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A416CAFD7DA78DFEB6BA42E3A7BD7587 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4437F617403147F2FD21BE7633FA514D /* Pods-CKZipFileEditor_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFCD6E53145C3CC3422373A376B47155 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		56D28C2F2B355A78AC766BCF70238300 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CKZipFileEditor;
+			target = CCE123F7E9B507FB42805EE488705A9B /* CKZipFileEditor */;
+			targetProxy = BD937EBBBD62B9CF3E06CDB1B25E2143 /* PBXContainerItemProxy */;
+		};
+		5E7E2A2AB205FEC668B894EAA4E68F61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CKZipFileEditor;
+			target = CCE123F7E9B507FB42805EE488705A9B /* CKZipFileEditor */;
+			targetProxy = 55B30731132A30CE8A9DD35CD3BC8A4E /* PBXContainerItemProxy */;
+		};
+		B4206037417B4C9002939242AC4D7590 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CKZipFileEditor-CKZipFileEditor";
+			target = 516EDDA4A0F3580583779F2299FF5648 /* CKZipFileEditor-CKZipFileEditor */;
+			targetProxy = 0352C6874EDA5E13474989020C93EBC1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03CA91998D6773EC5D02B3DB87B8353E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		4C133D246419105DD6582EBACE072003 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E242CC2F6889673A56C3CB2FE92C7A39 /* Pods-CKZipFileEditor_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CKZipFileEditor_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CKZipFileEditor_Example/Pods-CKZipFileEditor_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_CKZipFileEditor_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B7A6B2FDF9FDAB2FFC3B0488A569687B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDFC1AECF978CDF97CE3F2895FF9008A /* CKZipFileEditor.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = CKZipFileEditor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		BDCBD506307D4903751CDB9E9BC25905 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDFC1AECF978CDF97CE3F2895FF9008A /* CKZipFileEditor.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = CKZipFileEditor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		C270D58966197DD6A980D27CC5BCF83B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67E2D25D9105C6EA94F2F002DA1C4A99 /* Pods-CKZipFileEditor_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CKZipFileEditor_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CKZipFileEditor_Tests/Pods-CKZipFileEditor_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_CKZipFileEditor_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CB3FDAE2768B69508902753C5B3BA003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 249C8FC42B5E3CBFB5F01582B946C157 /* Pods-CKZipFileEditor_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CKZipFileEditor_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CKZipFileEditor_Tests/Pods-CKZipFileEditor_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_CKZipFileEditor_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D08CEED8D01AFE5541F4FFEAE3DEFAF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 847034C89B55C7385EC7B1C76E787896 /* Pods-CKZipFileEditor_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CKZipFileEditor_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CKZipFileEditor_Example/Pods-CKZipFileEditor_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_CKZipFileEditor_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D9E82E6154A7882BDFEE73C1D4C9036C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDFC1AECF978CDF97CE3F2895FF9008A /* CKZipFileEditor.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = "Target Support Files/CKZipFileEditor/CKZipFileEditor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CKZipFileEditor/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CKZipFileEditor/CKZipFileEditor.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CKZipFileEditor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E2D66678E0EE427CA0D0A4BDBBDB8A39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDFC1AECF978CDF97CE3F2895FF9008A /* CKZipFileEditor.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = "Target Support Files/CKZipFileEditor/CKZipFileEditor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CKZipFileEditor/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CKZipFileEditor/CKZipFileEditor.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CKZipFileEditor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B7C39EEE0CAE0893E8C1D5E92B9C445 /* Build configuration list for PBXNativeTarget "CKZipFileEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2D66678E0EE427CA0D0A4BDBBDB8A39 /* Debug */,
+				D9E82E6154A7882BDFEE73C1D4C9036C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */,
+				03CA91998D6773EC5D02B3DB87B8353E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B9E195F1936BD44DBBA408009E67141 /* Build configuration list for PBXNativeTarget "Pods-CKZipFileEditor_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB3FDAE2768B69508902753C5B3BA003 /* Debug */,
+				C270D58966197DD6A980D27CC5BCF83B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72B90D1E75D6236AF0E117B81847AF4B /* Build configuration list for PBXNativeTarget "Pods-CKZipFileEditor_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D08CEED8D01AFE5541F4FFEAE3DEFAF6 /* Debug */,
+				4C133D246419105DD6582EBACE072003 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A96CC38259740645C054D4FB0100AE80 /* Build configuration list for PBXNativeTarget "CKZipFileEditor-CKZipFileEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7A6B2FDF9FDAB2FFC3B0488A569687B /* Debug */,
+				BDCBD506307D4903751CDB9E9BC25905 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

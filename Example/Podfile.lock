@@ -1,0 +1,14 @@
+PODS:
+  - CKZipFileEditor (0.1.0)
+
+DEPENDENCIES:
+  - CKZipFileEditor (from `../`)
+
+EXTERNAL SOURCES:
+  CKZipFileEditor:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CKZipFileEditor: 6c5107fce487d073031a3f66a32bd21c63fc0a9d
+
+COCOAPODS: 0.39.0

@@ -1,0 +1,6 @@
+framework module Pods_CKZipFileEditor_Tests {
+  umbrella header "Pods-CKZipFileEditor_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
