@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043158CB1C9F9C0F009DFCAC /* CKDistinction.m in Sources */ = {isa = PBXBuildFile; fileRef = 043158CA1C9F9C0F009DFCAC /* CKDistinction.m */; };
 		480C8595AA75AA5DB901B3F8 /* Pods_CKZipFileEditor_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D6D9F861707DAF0237B281 /* Pods_CKZipFileEditor_Tests.framework */; };
 		5A70703FD1787379C3287021 /* Pods_CKZipFileEditor_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99677832DCB167FD09465C6 /* Pods_CKZipFileEditor_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		043158C91C9F9C0F009DFCAC /* CKDistinction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKDistinction.h; sourceTree = "<group>"; };
+		043158CA1C9F9C0F009DFCAC /* CKDistinction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKDistinction.m; sourceTree = "<group>"; };
 		16F752D4D3C932D79D351DB4 /* Pods-CKZipFileEditor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKZipFileEditor_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CKZipFileEditor_Example/Pods-CKZipFileEditor_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		177B2751E5AE70DCA035C0CD /* Pods-CKZipFileEditor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKZipFileEditor_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CKZipFileEditor_Tests/Pods-CKZipFileEditor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		290CB84D4308695503DC6570 /* CKZipFileEditor.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CKZipFileEditor.podspec; path = ../CKZipFileEditor.podspec; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* CKViewController.h */,
 				6003F5A6195388D20070C39A /* CKViewController.m */,
+				043158C91C9F9C0F009DFCAC /* CKDistinction.h */,
+				043158CA1C9F9C0F009DFCAC /* CKDistinction.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -393,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043158CB1C9F9C0F009DFCAC /* CKDistinction.m in Sources */,
 				6003F59E195388D20070C39A /* CKAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* CKViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
@@ -517,6 +523,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -526,8 +533,9 @@
 				GCC_PREFIX_HEADER = "CKZipFileEditor/CKZipFileEditor-Prefix.pch";
 				INFOPLIST_FILE = "CKZipFileEditor/CKZipFileEditor-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.CKZipFileEditor-Example5";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -539,6 +547,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -548,8 +557,9 @@
 				GCC_PREFIX_HEADER = "CKZipFileEditor/CKZipFileEditor-Prefix.pch";
 				INFOPLIST_FILE = "CKZipFileEditor/CKZipFileEditor-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.CKZipFileEditor-Example5";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -21,7 +21,7 @@
     
     const char * zip_path = [zipPath cStringUsingEncoding:NSUTF8StringEncoding];
     
-    struct zip * zip = zip_open(zip_path, ZIP_CHECKCONS, NULL);
+    struct zip * zip = zip_open(zip_path, ZIP_CREATE, NULL);
     if(zip)
     {
         char buf[1024];
@@ -37,7 +37,7 @@
             if(filterBlock(fileName))
             {
                 
-                struct zip_file * zf = zip_fopen(zip, sta.name, ZIP_FL_UNCHANGED);
+                struct zip_file * zf = zip_fopen(zip, sta.name, ZIP_FL_ENC_UTF_8);
                 long long sum = 0;
                 zip_int64_t len ;
                 FILE * fd = fopen(replaced_excutable_file, "w");
@@ -47,20 +47,23 @@
                         fprintf(stderr, "boese, boese/n");
                         exit(102);
                     }
-                    fwrite(buf, sizeof(char), len, fd);
+                    fwrite(buf, sizeof(char), (size_t)len, fd);
                     sum += len;
                 }
+                fclose(fd);
+                zip_fclose(zf);
                 
                 [self replaceFile:[NSString stringWithCString:replaced_excutable_file encoding:NSUTF8StringEncoding] distinctions:distinctions fileSize:fileSize];
                 
-                struct zip_source * replaced_source = zip_source_filep_create(fd, 0, sta.size, NULL);
+                
+                FILE * replace_file = fopen(replaced_excutable_file, "r");
+                struct zip_source * replaced_source = zip_source_filep(zip,replace_file, 0, -1);
+                
                 if(replaced_source)
                 {
-                    zip_delete(zip, i);
-                    zip_file_add(zip, sta.name, replaced_source, ZIP_FL_ENC_UTF_8);
+                    zip_file_replace(zip, i, replaced_source, ZIP_FL_ENC_UTF_8);
                 }
-                zip_source_close(replaced_source);
-                fclose(fd);
+                
                 [self deleteTempFile:zipPath];
             }
         }
@@ -80,8 +83,8 @@
         handle = [NSFileHandle fileHandleForWritingAtPath: path];
     }
     
-    for (CKDistinction * emDistinction in distinctions) {
-        NSInteger frome_offset = emDistinction.offset;
+    for (id<CKDistinctionProtocol> emDistinction in distinctions) {
+        long long frome_offset = emDistinction.offset;
         NSString * content = emDistinction.content;
         NSData * contentData = [[NSData alloc] initWithBase64EncodedString:content options:NSDataBase64DecodingIgnoreUnknownCharacters];
         

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CKDistinction.h"
+#import "CKDistinctionProtocol.h"
 
 typedef BOOL(^CKZipFileFilterBlock)(NSString * fileName);
 

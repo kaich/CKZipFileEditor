@@ -9,6 +9,7 @@
 #import "CKViewController.h"
 #import "CKZipFileEditor.h"
 #import "CKZipFileEditor+IPA.h"
+#import "CKDistinction.h"
 
 @interface CKViewController ()
 
@@ -23,7 +24,7 @@
     
     
     NSURLSession * session = [NSURLSession sharedSession];
-    NSURL * url = [NSURL URLWithString:@"http://192.168.1.110:3000/app/origin/get_sign_information"];
+    NSURL * url = [NSURL URLWithString:@"http://192.168.1.126:3000/app/origin/get_sign_information"];
     NSURLRequest * request = [NSURLRequest requestWithURL:url];
     NSURLSessionTask * task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSError * parseError = nil;
@@ -37,13 +38,12 @@
         if(!parseError)
         {
             NSLog(@"------------replace begin");
-            
             NSString * zipPath = [NSString stringWithFormat:@"%@%@",NSHomeDirectory(),@"/Documents/origin.ipa"];
             CKZipFileEditor * editor = [[CKZipFileEditor alloc] init];
             [editor replaceZipFile:zipPath fileFilter:^BOOL(NSString *fileName) {
                 return [CKZipFileEditor isExecutableFile:fileName];
             } fileSize:fileSize distinctions:distinctions];
-            NSLog(@"+++++++++++++replace complate");
+            NSLog(@"++++++++++++replace complate");
         }
         
     }];
