@@ -533,7 +533,7 @@
 				GCC_PREFIX_HEADER = "CKZipFileEditor/CKZipFileEditor-Prefix.pch";
 				INFOPLIST_FILE = "CKZipFileEditor/CKZipFileEditor-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.CKZipFileEditor-Example5";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.CKZipFileEditor-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -557,7 +557,7 @@
 				GCC_PREFIX_HEADER = "CKZipFileEditor/CKZipFileEditor-Prefix.pch";
 				INFOPLIST_FILE = "CKZipFileEditor/CKZipFileEditor-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.CKZipFileEditor-Example5";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.CKZipFileEditor-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
