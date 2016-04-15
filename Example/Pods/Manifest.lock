@@ -1,5 +1,7 @@
 PODS:
-  - CKZipFileEditor (0.1.0)
+  - CKZipFileEditor (0.1.0):
+    - objective-zip (~> 1.0)
+  - objective-zip (1.0.2)
 
 DEPENDENCIES:
   - CKZipFileEditor (from `../`)
@@ -9,6 +11,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CKZipFileEditor: 6c5107fce487d073031a3f66a32bd21c63fc0a9d
+  CKZipFileEditor: b83df010cc97a7efcfcb289139d9a703d6a136ec
+  objective-zip: b78d235d234546105e118d35ae24a69feba08d44
 
 COCOAPODS: 0.39.0

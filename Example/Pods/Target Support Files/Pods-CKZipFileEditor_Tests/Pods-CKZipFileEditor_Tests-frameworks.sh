@@ -85,7 +85,9 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-CKZipFileEditor_Tests/CKZipFileEditor.framework"
+  install_framework "Pods-CKZipFileEditor_Tests/objective_zip.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-CKZipFileEditor_Tests/CKZipFileEditor.framework"
+  install_framework "Pods-CKZipFileEditor_Tests/objective_zip.framework"
 fi

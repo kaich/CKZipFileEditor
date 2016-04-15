@@ -21,5 +21,10 @@
     "CKZipFileEditor": [
       "Pod/Assets/*.png"
     ]
+  },
+  "dependencies": {
+    "objective-zip": [
+      "~> 1.0"
+    ]
   }
 }
