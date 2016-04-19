@@ -17,7 +17,7 @@
 -(void) replaceZipFile:(NSString *) zipPath  fileDistinctions:(NSArray<CKFileProtocol>  *) distinctFiles
 {
     NSAssert([[NSFileManager defaultManager] fileExistsAtPath:zipPath], @"zip file does not exist at path!");
-    
+    if(distinctFiles.count <= 0) return ;
     
     char * buf = NULL;
     int  buf_size = 1024;

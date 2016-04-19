@@ -8,7 +8,6 @@
 
 #import "CKViewController.h"
 #import "CKZipFileEditor.h"
-#import "CKZipFileEditor+IPA.h"
 #import "CKDistinction.h"
 #import "CKFileInfo.h"
 
