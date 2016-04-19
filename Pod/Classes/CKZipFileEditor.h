@@ -8,12 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "CKDistinctionProtocol.h"
-
-typedef BOOL(^CKZipFileFilterBlock)(NSString * fileName);
+#import "CKFileProtocol.h"
 
 @interface CKZipFileEditor : NSObject
 @property(nonatomic,strong) NSString * tempFilePath;
 
--(void) replaceZipFile:(NSString *) zipPath fileFilter:(CKZipFileFilterBlock) filterBlock  fileSize:(long long) fileSize distinctions:(NSArray *) distinctions;
+-(void) replaceZipFile:(NSString *) zipPath  fileDistinctions:(NSArray<CKFileProtocol> *) distinctFiles;
 
 @end

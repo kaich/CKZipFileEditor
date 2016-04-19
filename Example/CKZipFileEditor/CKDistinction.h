@@ -11,7 +11,7 @@
 
 @interface CKDistinction : NSObject<CKDistinctionProtocol>
 
-@property(nonatomic,strong) NSString * content;
+@property(nonatomic,strong) NSData * data;
 @property(nonatomic,assign) long long offset;
 -(instancetype) initWithDictionary:(NSDictionary *) jsonObject;
 

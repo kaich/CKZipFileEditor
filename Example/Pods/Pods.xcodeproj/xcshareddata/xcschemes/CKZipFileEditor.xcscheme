@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B17C37656DAB6C4FF27300A3'
+               BlueprintIdentifier = '5C0163E8AC3593F2233DB51D'
                BlueprintName = 'CKZipFileEditor'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'CKZipFileEditor.framework'>

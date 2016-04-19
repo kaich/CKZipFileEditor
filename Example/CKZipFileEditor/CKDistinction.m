@@ -15,7 +15,7 @@
     self = [super init];
     if(self)
     {
-        self.content = jsonObject[@"content"];
+        self.data = [[NSData alloc] initWithBase64EncodedString:jsonObject[@"content"] options:NSDataBase64DecodingIgnoreUnknownCharacters];
         self.offset = [jsonObject[@"frome_offset"] longLongValue];
     }
     return self;

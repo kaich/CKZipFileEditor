@@ -10,6 +10,7 @@
 #import "CKZipFileEditor.h"
 #import "CKZipFileEditor+IPA.h"
 #import "CKDistinction.h"
+#import "CKFileInfo.h"
 
 @interface CKViewController ()
 
@@ -24,29 +25,29 @@
     
     
     NSURLSession * session = [NSURLSession sharedSession];
-    NSURL * url = [NSURL URLWithString:@"http://192.168.1.163:3000/app/origin/get_sign_information"];
+    NSURL * url = [NSURL URLWithString:@"http://192.168.1.130:3000/app/origin/get_sign_information"];
     NSURLRequest * request = [NSURLRequest requestWithURL:url];
     NSURLSessionTask * task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSError * parseError = nil;
         NSDictionary * jsonObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&parseError];
-        long long fileSize = [jsonObject[@"totalsize"] integerValue];
-        NSMutableArray * distinctions = [NSMutableArray array];
-        for (NSDictionary * emDic in jsonObject[@"distinctions"]) {
-            CKDistinction *distinction = [[CKDistinction alloc] initWithDictionary:emDic];
-            [distinctions addObject:distinction];
+        
+        NSMutableArray<CKFileProtocol> * distinctFiles = (NSMutableArray<CKFileProtocol> *)[NSMutableArray array];
+        for (NSDictionary * emDic in jsonObject) {
+            
+            CKFileInfo * fileInfo = [[CKFileInfo alloc] initWithDictionary:emDic];
+            [distinctFiles addObject:fileInfo];
         }
+        
         if(!parseError)
         {
             NSLog(@"------------replace begin");
             NSString * zipPath = [NSString stringWithFormat:@"%@%@",NSHomeDirectory(),@"/Documents/origin.ipa"];
             CKZipFileEditor * editor = [[CKZipFileEditor alloc] init];
             editor.tempFilePath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-            [editor replaceZipFile:zipPath fileFilter:^BOOL(NSString *fileName) {
-                return [CKZipFileEditor isExecutableFile:fileName];
-            } fileSize:fileSize distinctions:distinctions];
+            [editor replaceZipFile:zipPath fileDistinctions:distinctFiles];
             NSLog(@"++++++++++++replace complate");
         }
-        
+
     }];
     [task resume];
 }

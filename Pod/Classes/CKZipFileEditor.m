@@ -7,151 +7,99 @@
 //
 
 #import "CKZipFileEditor.h"
-#include "libzip_iOS/zip.h"
-//#import "objective-zip/Objective-Zip.h"
+#import "NSString+MD5.h"
+#import "objective-zip/Objective-Zip.h"
 
 
 @implementation CKZipFileEditor
 
 
--(void) replaceZipFile:(NSString *) zipPath fileFilter:(CKZipFileFilterBlock) filterBlock  fileSize:(long long) fileSize distinctions:(NSArray *) distinctions
+-(void) replaceZipFile:(NSString *) zipPath  fileDistinctions:(NSArray<CKFileProtocol>  *) distinctFiles
 {
-    NSAssert(filterBlock, @"");
+    NSAssert([[NSFileManager defaultManager] fileExistsAtPath:zipPath], @"zip file does not exist at path!");
     
-    const char * replaced_excutable_file = [[self replaceFilePath:zipPath] cStringUsingEncoding:NSUTF8StringEncoding];
+    const char * replaced_file = NULL;
     
-    const char * zip_path = [zipPath cStringUsingEncoding:NSUTF8StringEncoding];
+    char * buf = NULL;
+    int  buf_size = 1024;
     
-    struct zip * zip = zip_open(zip_path, ZIP_CREATE, NULL);
+    OZZipFile * zip = [[OZZipFile alloc] initWithFileName:zipPath mode:OZZipFileModeUnzip];
+    
     if(zip)
     {
-        char buf[1024];
-        int  buf_size = 1024;
-        zip_int64_t entiry_count = zip_get_num_entries(zip, 0);
-        for(zip_int64_t i = 0 ; i < entiry_count ; i ++)
+        NSString * fileName = nil;
+        unsigned long long fileLength = 0;
+        
+        for(id<CKFileProtocol>  emDistinctFile in distinctFiles)
         {
-            struct zip_stat  sta;
-            zip_stat_init(&sta);
-            zip_stat_index(zip, i, 0, &sta);
+            [zip locateFileInZip:emDistinctFile.filename];
+            OZFileInZipInfo * emfile = [zip getCurrentFileInZipInfo];
             
-            NSString * fileName = [NSString stringWithCString:sta.name encoding:NSUTF8StringEncoding];
-            if(filterBlock(fileName))
+            fileName = emfile.name;
+            fileLength = emfile.length;
+            
+            NSArray * distinctions = emDistinctFile.distinctions;
+            if(distinctions)
             {
+                [zip locateFileInZip:fileName];
                 
-                struct zip_file * zf = zip_fopen(zip, sta.name, ZIP_FL_ENC_UTF_8);
+                OZZipReadStream * readStream =  [zip readCurrentFileInZip];
+                
+                replaced_file = [[self replaceFilePath:zipPath filename:fileName] cStringUsingEncoding:NSUTF8StringEncoding];
+                
                 long long sum = 0;
-                zip_int64_t len ;
-                FILE * fd = fopen(replaced_excutable_file, "w");
-                while (sum != sta.size) {
-                    len = zip_fread(zf, buf, buf_size);
-                    if (len < 0) {
-                        fprintf(stderr, "boese, boese/n");
-                        exit(102);
-                    }
+                NSUInteger len ;
+                FILE * fd = fopen(replaced_file, "w");
+                NSMutableData * data = [NSMutableData dataWithCapacity:buf_size];
+                while (sum != fileLength) {
+                    [data setLength:buf_size];
+                    len = [readStream readDataWithBuffer:data];
+                    buf = (char *)[data bytes];
                     fwrite(buf, sizeof(char), (size_t)len, fd);
                     sum += len;
                 }
                 fclose(fd);
-                zip_fclose(zf);
-                
-                [self replaceFile:[NSString stringWithCString:replaced_excutable_file encoding:NSUTF8StringEncoding] distinctions:distinctions fileSize:fileSize];
+                [readStream finishedReading];
                 
                 
-                FILE * replace_file = fopen(replaced_excutable_file, "r");
-                struct zip_source * replaced_source = zip_source_filep(zip,replace_file, 0, -1);
+                [self replaceFile:[NSString stringWithCString:replaced_file encoding:NSUTF8StringEncoding] distinctions:distinctions fileSize:emDistinctFile.fileSize];
                 
-                if(replaced_source)
-                {
-                    zip_file_replace(zip, i, replaced_source, 0);
-                    zip_source_free(replaced_source);
-                }
-                
-                [self deleteTempFile:zipPath];
             }
         }
+        
+        
+        [zip close];
     }
     
-    zip_close(zip);
+    
+    
+    OZZipFile * azip = [[OZZipFile alloc] initWithFileName:zipPath mode:OZZipFileModeAppend];
+    
+    if(azip)
+    {
+        for (id<CKFileProtocol>  emDistinctFile in distinctFiles) {
+            OZZipWriteStream * writeStream = [azip writeFileInZipWithName:emDistinctFile.filename fileDate:[NSDate date] compressionLevel:OZZipCompressionLevelDefault];
+            FILE * rf = fopen(replaced_file, "r");
+            size_t wlen = 0;
+            size_t total = 0;
+            NSData * data = nil;
+            while ((wlen = fread(buf, sizeof(char), buf_size, rf)) > 0) {
+                data = [NSData dataWithBytes:buf length:wlen];
+                [writeStream writeData:data];
+                total += wlen;
+            }
+            fclose(rf);
+            [writeStream finishedWriting];
+        }
+        
+        
+        [azip close];
+        
+    }
+    
+    [self deleteTempFile:zipPath];
+    
 }
-
-//-(void) replaceZipFile:(NSString *) zipPath fileFilter:(CKZipFileFilterBlock) filterBlock  fileSize:(long long) fileSize distinctions:(NSArray *) distinctions
-//{
-//    NSAssert(filterBlock, @"");
-//    
-//    const char * replaced_excutable_file = [[self replaceFilePath:zipPath] cStringUsingEncoding:NSUTF8StringEncoding];
-//    
-//    NSString * fileName = nil;
-//    NSUInteger fileLength = 0;
-//    
-//    char * buf;
-//    int  buf_size = 1024;
-//    
-//    OZZipFile * zip = [[OZZipFile alloc] initWithFileName:zipPath mode:OZZipFileModeUnzip];
-//    
-//    if(zip)
-//    {
-//        
-//        for(OZFileInZipInfo * emfile in zip.listFileInZipInfos)
-//        {
-//            
-//            fileName = emfile.name;
-//            fileLength = emfile.length;
-//            
-//            
-//            if(filterBlock(fileName))
-//            {
-//                [zip locateFileInZip:fileName];
-//                
-//                OZZipReadStream * readStream =  [zip readCurrentFileInZip];
-//                
-//                long long sum = 0;
-//                NSUInteger len ;
-//                FILE * fd = fopen(replaced_excutable_file, "w");
-//                NSMutableData * data = [NSMutableData dataWithCapacity:buf_size];
-//                while (sum != fileLength) {
-//                    [data setLength:buf_size];
-//                    len = [readStream readDataWithBuffer:data];
-//                    buf = (char *)[data bytes];
-//                    fwrite(buf, sizeof(char), (size_t)len, fd);
-//                    sum += len;
-//                }
-//                fclose(fd);
-//                [readStream finishedReading];
-//                
-//                [zip close];
-//                
-//                
-//                break;
-//            }
-//        }
-//    }
-//    
-//    
-//    [self replaceFile:[NSString stringWithCString:replaced_excutable_file encoding:NSUTF8StringEncoding] distinctions:distinctions fileSize:fileSize];
-//                
-//    
-//    OZZipFile * azip = [[OZZipFile alloc] initWithFileName:zipPath mode:OZZipFileModeAppend];
-//    
-//    if(azip)
-//    {
-//        OZZipWriteStream * writeStream = [azip writeFileInZipWithName:fileName fileDate:[NSDate date] compressionLevel:OZZipCompressionLevelNone];
-//        FILE * rf = fopen(replaced_excutable_file, "r");
-//        size_t wlen = 0;
-//        size_t total = 0;
-//        while ((wlen = fread(buf, sizeof(char), buf_size, rf)) > 0) {
-//            NSData * data = [NSData dataWithBytes:buf length:wlen];
-//            [writeStream writeData:data];
-//            total += wlen;
-//        }
-//        fclose(rf);
-//        [writeStream finishedWriting];
-//        [azip close];
-//    }
-//    
-//    [self deleteTempFile:zipPath];
-//    
-//    
-//}
 
 
 #pragma mark - private method 
@@ -166,8 +114,7 @@
     
     for (id<CKDistinctionProtocol> emDistinction in distinctions) {
         long long frome_offset = emDistinction.offset;
-        NSString * content = emDistinction.content;
-        NSData * contentData = [[NSData alloc] initWithBase64EncodedString:content options:NSDataBase64DecodingIgnoreUnknownCharacters];
+        NSData * contentData = emDistinction.data;
         
         [handle seekToFileOffset:frome_offset];
         [handle writeData:contentData];
@@ -177,21 +124,47 @@
     [handle closeFile];
 }
 
--(NSString *) replaceFilePath:(NSString *) zipPath
+-(NSString *) tempDirectory:(NSString *) zipPath
 {
-    NSString * tempFileDir = self.tempFilePath ?  self.tempFilePath : NSTemporaryDirectory();
+    NSString * tempFileBaseDir = self.tempFilePath ?  self.tempFilePath : NSTemporaryDirectory();
     NSString * name = [[zipPath stringByDeletingPathExtension] lastPathComponent];
-    NSString * replacedExecutableFile = [tempFileDir stringByAppendingPathComponent:name];
+    NSString * tempFileDir = [tempFileBaseDir stringByAppendingPathComponent:name];
+    [self createFolder:tempFileDir];
+    return tempFileDir;
+}
+
+-(NSString *) replaceFilePath:(NSString *) zipPath filename:(NSString *) filename
+{
+    NSString * tempFileDir = [self tempDirectory:zipPath];
+    
+    NSString * filenameMD5 = [filename MD5Digest];
+    NSString * replacedExecutableFile = [tempFileDir stringByAppendingPathComponent:filenameMD5];
     return replacedExecutableFile;
 }
 
 -(void) deleteTempFile:(NSString *) zipPath
 {
-    NSString * tempPath = [self replaceFilePath: zipPath];
+    NSString * tempPath = [self tempDirectory:zipPath];
     if([[NSFileManager defaultManager] fileExistsAtPath:tempPath])
     {
         [[NSFileManager defaultManager] removeItemAtPath:tempPath error:nil];
     }
+}
+
+-(BOOL) createFolder:(NSString*) path {
+    NSFileManager *filemgr = [NSFileManager new];
+    
+    NSError *error = nil;
+    if (![filemgr fileExistsAtPath:path]) {
+        [filemgr createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error];
+    }
+    
+    if(error)
+    {
+        NSLog(@"Failed to create cache directory");
+        return NO;
+    }
+    return  YES;
 }
 
 @end
