@@ -35,7 +35,6 @@
 		6717E8BB26F2F238688F17B23D8B7EA4 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = BA4187620D4CFCFB6B497468CA83414D /* crypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		69C4168CD4A03FBA7648CFA34FF00E35 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = A48F2ED71655BD8BAB0B10352D4315D0 /* unzip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		7395438C38E36039D1AC4447579451AB /* OZZipCompressionLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = FB0D947C1F1870F5E5DA006BC3721501 /* OZZipCompressionLevel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		76141ABCB04C5B4530FB536BE5CC85F8 /* CKZipFileEditor+IPA.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DD0FBAEFCA2F899C0C7EEDEA3A53A3 /* CKZipFileEditor+IPA.m */; };
 		77DB03FB83324E30438288271E3DEBF5 /* CKZipFileEditor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7334AA61AFDF2E3218CD6E9FD401FB6A /* CKZipFileEditor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7935F73430C3C23B9A0ADB286A09500A /* adler32.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A10450F05CA771AA899BE4C78D7E56F /* adler32.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		796DBEC03C56D39B8A41E8D040F3DF5E /* inftrees.c in Sources */ = {isa = PBXBuildFile; fileRef = BB4ED8713AF4056BDCB7B846BEF98EEE /* inftrees.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -82,7 +81,6 @@
 		E9B20DE20AED9F9FEF64FBE5721F4F46 /* infback.c in Sources */ = {isa = PBXBuildFile; fileRef = D43977C8EF637F19C955C005624B4F39 /* infback.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		EAC96BE44744B1CCDB9A448EFA7C0200 /* gzguts.h in Headers */ = {isa = PBXBuildFile; fileRef = 1118415FA6093541B605E6B73FF6BC41 /* gzguts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB7D33429D6A738FFDF8E079261B743B /* OZZipWriteStream+Internals.h in Headers */ = {isa = PBXBuildFile; fileRef = 01DE6D4F09600D2733825C9394D39567 /* OZZipWriteStream+Internals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ED3FD9B76F35E1807C36D6351B10CAF6 /* CKZipFileEditor+IPA.h in Headers */ = {isa = PBXBuildFile; fileRef = DBEAEBF303DF191F0FA6C4C503F95151 /* CKZipFileEditor+IPA.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDBABD3587F4D4A7F8DFB8DCF330DFE6 /* CKZipFileEditor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC839A87DFBA6C3E6D5C774F23D72A02 /* CKZipFileEditor-dummy.m */; };
 		EEF8855F6646FDA8032BAED4C1261F93 /* zutil.c in Sources */ = {isa = PBXBuildFile; fileRef = AE4AB8F3605EB42DCBD05C090F31C581 /* zutil.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		F8F565984896572BC55FC7B2A0DB4957 /* OZZipException+Internals.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F19AC7AAD0957CC51CC84796465E586 /* OZZipException+Internals.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -145,7 +143,6 @@
 		113B31192234B8DC0B1D0C75A2F540EE /* Pods-CKZipFileEditor_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CKZipFileEditor_Example-resources.sh"; sourceTree = "<group>"; };
 		14F813C2C7E50BA3415DABB0BF8F0D43 /* NSString+MD5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		15F986AEE3BF30F5C72E718DB0561512 /* OZFileInZipInfo+Internals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OZFileInZipInfo+Internals.h"; path = "Objective-Zip/OZFileInZipInfo+Internals.h"; sourceTree = "<group>"; };
-		17DD0FBAEFCA2F899C0C7EEDEA3A53A3 /* CKZipFileEditor+IPA.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CKZipFileEditor+IPA.m"; sourceTree = "<group>"; };
 		20178796807ABAFB235A6E2BBE9A80CC /* trees.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = trees.h; path = ZLib/trees.h; sourceTree = "<group>"; };
 		249C8FC42B5E3CBFB5F01582B946C157 /* Pods-CKZipFileEditor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CKZipFileEditor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		264BBD8BD7C1AEA5B6C5C1160DF6AF1A /* Pods-CKZipFileEditor_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CKZipFileEditor_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -230,7 +227,6 @@
 		D93E4CE3F020C27C49A0E4F143FA6F66 /* CKZipFileEditor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CKZipFileEditor.h; sourceTree = "<group>"; };
 		D9CDAAAE1B7B68599C28EDC65CBED12C /* Pods-CKZipFileEditor_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CKZipFileEditor_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DA2259F2F3338CEA39676B659B7F4B76 /* zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = zlib.h; path = ZLib/zlib.h; sourceTree = "<group>"; };
-		DBEAEBF303DF191F0FA6C4C503F95151 /* CKZipFileEditor+IPA.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CKZipFileEditor+IPA.h"; sourceTree = "<group>"; };
 		E242CC2F6889673A56C3CB2FE92C7A39 /* Pods-CKZipFileEditor_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CKZipFileEditor_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F3C7957B03E844DCAE0B181D8851A92A /* OZZipWriteStream+NSError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OZZipWriteStream+NSError.h"; path = "Objective-Zip/OZZipWriteStream+NSError.h"; sourceTree = "<group>"; };
 		F672EAE31DA17AE9197FFAEE91E19B41 /* ioapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = MiniZip/ioapi.h; sourceTree = "<group>"; };
@@ -313,8 +309,6 @@
 				38D00AA8EB763187B1C1A993FA6A7907 /* CKFileProtocol.h */,
 				D93E4CE3F020C27C49A0E4F143FA6F66 /* CKZipFileEditor.h */,
 				2DDB1083AF955933550497DD3E39BCFF /* CKZipFileEditor.m */,
-				DBEAEBF303DF191F0FA6C4C503F95151 /* CKZipFileEditor+IPA.h */,
-				17DD0FBAEFCA2F899C0C7EEDEA3A53A3 /* CKZipFileEditor+IPA.m */,
 				14F813C2C7E50BA3415DABB0BF8F0D43 /* NSString+MD5.h */,
 				913655B75AF485B2D3C42F717243EB7C /* NSString+MD5.m */,
 			);
@@ -564,7 +558,6 @@
 			files = (
 				05A5BAD574DCDE377E008F9FBA728997 /* CKDistinctionProtocol.h in Headers */,
 				D7A54E26C4287588909943A70CFB2DF4 /* CKFileProtocol.h in Headers */,
-				ED3FD9B76F35E1807C36D6351B10CAF6 /* CKZipFileEditor+IPA.h in Headers */,
 				77DB03FB83324E30438288271E3DEBF5 /* CKZipFileEditor-umbrella.h in Headers */,
 				2E95ECD2C677D64A59B094AC41FB7190 /* CKZipFileEditor.h in Headers */,
 				61B49F86E462941266169F4BFEB93D27 /* NSString+MD5.h in Headers */,
@@ -774,7 +767,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76141ABCB04C5B4530FB536BE5CC85F8 /* CKZipFileEditor+IPA.m in Sources */,
 				EDBABD3587F4D4A7F8DFB8DCF330DFE6 /* CKZipFileEditor-dummy.m in Sources */,
 				A06E1941BEE4ADAD22702011A8DD9EC0 /* CKZipFileEditor.m in Sources */,
 				3959AB1D2481C585EDEDC5150A338B73 /* NSString+MD5.m in Sources */,
