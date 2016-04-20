@@ -16,11 +16,12 @@
 
 -(void) replaceZipFile:(NSString *) zipPath  fileDistinctions:(NSArray<CKFileProtocol>  *) distinctFiles
 {
-    NSAssert([[NSFileManager defaultManager] fileExistsAtPath:zipPath], @"zip file does not exist at path!");
-    if(distinctFiles.count <= 0) return ;
+    BOOL isZipFileExist = [[NSFileManager defaultManager] fileExistsAtPath:zipPath];
+    NSAssert(isZipFileExist, @"zip file does not exist at path!");
+    if(!isZipFileExist || distinctFiles.count <= 0) return ;
     
     char * buf = NULL;
-    int  buf_size = 1024;
+    int  buf_size = 1024 ;
     
     OZZipFile * zip = [[OZZipFile alloc] initWithFileName:zipPath mode:OZZipFileModeUnzip];
     
@@ -82,7 +83,7 @@
     {
         const char * replaced_file = NULL;
         for (id<CKFileProtocol>  emDistinctFile in distinctFiles) {
-            OZZipWriteStream * writeStream = [azip writeFileInZipWithName:emDistinctFile.filename fileDate:[NSDate date] compressionLevel:OZZipCompressionLevelNone];
+            OZZipWriteStream * writeStream = [azip writeFileInZipWithName:emDistinctFile.filename fileDate:[NSDate date] compressionLevel:OZZipCompressionLevelFastest];
             
             replaced_file = [[self replaceFilePath:zipPath filename:emDistinctFile.filename] cStringUsingEncoding:NSUTF8StringEncoding];
             FILE * rf = fopen(replaced_file, "r");
